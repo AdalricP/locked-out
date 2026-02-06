@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>locked out</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">locked out</div>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <h2 class="section-title">Blocklist</h2>
+        <p class="section-description">Sites on this list will trigger the AI bouncer. You can negotiate access.</p>
+
+        <textarea
+          id="blocklistInput"
+          class="text-area monospace"
+          placeholder="twitter.com&#10;youtube.com&#10;reddit.com"
+          rows="6"
+        ></textarea>
+
+        <div class="blocklist-stats">
+          <span id="blocklistCount">0</span> sites blocked
+        </div>
+
+        <div class="save-row">
+          <button id="saveBlocklistBtn" class="btn btn-primary">
+            <span class="btn-text">Save Blocklist</span>
+            <span class="btn-saved" hidden>Saved!</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section super-block">
+        <h2 class="section-title">Super Blocklist (Perma-block)</h2>
+        <p class="section-description">Sites on this list are <strong>permanently blocked</strong> - no AI, no negotiation. Just blocked.</p>
+
+        <textarea
+          id="superBlocklistInput"
+          class="text-area monospace super-block"
+          placeholder="itch.io&#10;pornhub.com&#10;casino sites..."
+          rows="6"
+        ></textarea>
+
+        <div class="blocklist-stats">
+          <span id="superBlocklistCount">0</span> sites permanently blocked
+        </div>
+
+        <div class="save-row">
+          <button id="saveSuperBlocklistBtn" class="btn btn-primary">
+            <span class="btn-text">Save Super Blocklist</span>
+            <span class="btn-saved" hidden>Saved!</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">API Key</h2>
+        <p class="section-description">Enter your <a href="https://openrouter.ai/keys" target="_blank">OpenRouter API key</a>. Key is stored locally.</p>
+
+        <div class="input-group">
+          <div class="password-input">
+            <input
+              id="apiKeyInput"
+              type="password"
+              class="input"
+              placeholder="sk-or-v1-..."
+            />
+            <button id="toggleApiKeyBtn" class="icon-btn" title="Show API key">
+              <svg class="eye-open" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 4c-4 0-7.5 2-10 6 2.5 4 6 6 10 6s7.5-2 10-6c-2.5-4-6-6-10-6z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <svg class="eye-closed" width="20" height="20" viewBox="0 0 20 20" fill="none" hidden>
+                <path d="M4 4l12 12M4 16L16 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <button id="testApiKeyBtn" class="btn btn-secondary">Test Connection</button>
+        </div>
+
+        <div id="apiStatus" class="status-message" hidden></div>
+
+        <div class="save-row">
+          <button id="saveApiKeyBtn" class="btn btn-primary">
+            <span class="btn-text">Save API Key</span>
+            <span class="btn-saved" hidden>Saved!</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-text">locked out v1.0</p>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

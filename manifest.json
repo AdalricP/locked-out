@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "locked out",
+  "version": "1.0.0",
+  "description": "AI-powered website blocker that evaluates your reasons against your goals.",
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "tabs",
+    "alarms",
+    "idle"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "options/options.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup/*", "popup/system_prompt.md", "popup/soul.md", "popup/blocked.html", "popup/blocked.css", "popup/blocked.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

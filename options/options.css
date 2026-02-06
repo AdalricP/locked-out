@@ -1,0 +1,274 @@
+/* Locked Out - Options Page */
+
+:root {
+  --bg: #000000;
+  --bg-secondary: #111111;
+  --text: #ffffff;
+  --text-muted: #888888;
+  --border: #333333;
+  --white: #ffffff;
+  --black: #000000;
+  --green: #00ff00;
+  --green-bg: #003300;
+  --red: #ff4444;
+  --red-bg: #330000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  min-width: 500px;
+  width: 500px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 32px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Sections */
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-description {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.section-description a {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg-secondary);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--white);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.text-area {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg-secondary);
+  resize: none;
+}
+
+.text-area:focus {
+  outline: none;
+  border-color: var(--white);
+}
+
+.text-area::placeholder {
+  color: var(--text-muted);
+}
+
+.text-area.monospace {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+}
+
+.password-input {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.password-input .input {
+  flex: 1;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background: var(--bg-secondary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-saved {
+  color: var(--green);
+}
+
+.save-row {
+  margin-top: 16px;
+}
+
+/* Status messages */
+.status-message {
+  padding: 12px 16px;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.status-message.success {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.status-message.error {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+/* Blocklist stats */
+.blocklist-stats {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.blocklist-stats span {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Footer */
+.footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+/* Super block section */
+.super-block {
+  border: 1px solid var(--border);
+  padding: 24px;
+  margin: 0 -24px;
+}
+
+.super-block .section-title {
+  color: var(--text);
+}
+
+.super-block .section-description a {
+  color: var(--text);
+}
+
+.super-block .blocklist-stats {
+  color: var(--text-muted);
+}
+
+.super-block .blocklist-stats span {
+  color: var(--text);
+}
+
+.text-area.super-block {
+  border-color: var(--border);
+}
+
+.text-area.super-block:focus {
+  border-color: var(--white);
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}

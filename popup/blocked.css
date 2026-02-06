@@ -1,0 +1,70 @@
+/* Locked Out - Permanently Blocked Page */
+
+:root {
+  --bg: #000000;
+  --bg-secondary: #111111;
+  --text: #ffffff;
+  --text-muted: #888888;
+  --border: #333333;
+  --white: #ffffff;
+  --red: #ff4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.blocked-content {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+}
+
+.message {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.settings-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.settings-link:hover {
+  color: var(--white);
+}
