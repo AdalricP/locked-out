@@ -4,7 +4,8 @@ A browser extension that helps you manage your screen time by blocking distracti
 
 ## Screenshot
 
-![Locked Out Screenshot](./Screenshot%202026-02-07%20at%205.24.19%20AM.png)
+<img width="1419" height="763" alt="Screenshot 2026-02-07 at 5 24 19 AM" src="https://github.com/user-attachments/assets/23497a15-bd3e-4f0d-87a3-b08e0b3b1039" />
+
 
 ## Features
 
